@@ -1,26 +1,17 @@
-# gatsby-starter-default
-The default Gatsby starter.
+# README
 
-For an overview of the project structure please refer to the [Gatsby documentation - Building with Components](https://www.gatsbyjs.org/docs/building-with-components/).
+# Steps to reproduce
 
-## Install
+1. `npm i`
+2. `gatsby develop`
+3. Navigate to `http://localhost:8000/___graphql?query=%7B%0A%20%20settingsJson%20%7B%0A%20%20%20%09alpha1%0A%20%20%20%20bravo1%0A%20%20%20%20charlie1%0A%20%20%7D%20%0A%20%20%20%0A%7D%0A`
 
-Make sure that you have the Gatsby CLI program installed:
-```sh
-npm install --global gatsby-cli
-```
+# Expected
 
-And run from your CLI:
-```sh
-gatsby new gatsby-example-site
-```
+All settings have defined values.
 
-Then you can run it by:
-```sh
-cd gatsby-example-site
-gatsby develop
-```
+# Result
 
-## Deploy
+Only one setting has a defined value. The others are null.
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-default)
+Note that the json files can be found in `./src/content/settings`.
